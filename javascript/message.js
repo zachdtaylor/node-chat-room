@@ -1,6 +1,6 @@
 var username = "";
 
-(function () {
+$(function () {
     var socket = io();
     $('form').submit(function(){
         socket.emit('chat message', $('#m').val());
@@ -14,5 +14,5 @@ var username = "";
 
 $(document).ready(function (){
     username = prompt("Please enter your username");
-    $("#display-username").text("Username: " + username);
+    $("#display-username").text()
 });
