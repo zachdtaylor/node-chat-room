@@ -36,4 +36,12 @@ $(document).ready(function (){
     $("#m").keyup(function() {
         socket.emit('user typing', username);
     });
+
+    $("#m").keypress(function (e) {
+        if(e.which == 13 && !e.shiftKey) {        
+            $(this).closest("form").submit();
+            e.preventDefault();
+            return false;
+        }
+    });
 });
