@@ -5,12 +5,16 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="message.js"></script>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <ul id="messages"></ul>
-    <div id="display-username"></div>
+    <div id="display_info">
+      <div id="display-username">Username: username</div>
+      <div id="display-typing">username is typing</div>
+    </div>
     <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <textarea id="m" autocomplete="off" ></textarea><button>Send</button>
     </form>
   </body>
 </html>
