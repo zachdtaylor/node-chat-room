@@ -14,5 +14,5 @@ $(function () {
 
 $(document).ready(function (){
     username = prompt("Please enter your username");
-    $("#display-username").text()
+    $("#display-username").text("Username: " + username);
 });
