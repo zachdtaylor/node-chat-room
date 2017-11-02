@@ -22,6 +22,9 @@ $(function () {
 
     socket.on('user typing', function(usr) {
         $("#display-typing").text(usr + " is typing...");
+        setTimeout(function () {
+            $("#display-typing").text("");
+            }, 5000);
     });
 });
 

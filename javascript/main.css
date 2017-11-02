@@ -30,23 +30,23 @@ form {
     width: 100%; 
     grid-area: tosend;
     display:grid;
-    grid-template-columns: 1fr 5%;
-    grid-gap: 3px;
+    grid-template-columns: 1fr 8%;
 }
 
 form textarea { 
     border: 0; 
-    width: 100%;
+    width: 98%;
     height:100%;
     font-size: 24px;
-    padding: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 form button { 
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    width: 100%;
+    width: 90%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -68,11 +68,8 @@ h1 {
     grid-area: username;
 }
 
-#display_typing {
 
-}
-
-ul, div , body, h1{
+ul, div , body, h1, form {
     color:white;
     background-color: #1D2731;
 }
