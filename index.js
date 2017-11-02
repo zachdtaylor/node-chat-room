@@ -14,7 +14,7 @@ var clients = [];
 var client_names = [];
 
 io.on('connection', function(socket){
-    console.log('a user connected');
+   // console.log('a user connected');
     socket.on('new user', function(usr) {
       clients.push(socket);
       client_names.push(usr);
@@ -23,14 +23,14 @@ io.on('connection', function(socket){
     socket.on('disconnect', function(){
       var k = clients.indexOf(socket);
       name = client_names[k];
-      console.log('user ' + name + ' disconnected');
+     // console.log('user ' + name + ' disconnected');
       clients.splice(k, 1);
       client_names.splice(k, 1);
       io.emit('user disconnect', name);
     });
     socket.on('chat message', function(usr, msg){
-      console.log('user: ' + usr);
-      console.log('message: ' + msg);
+     // console.log('user: ' + usr);
+     // console.log('message: ' + msg);
       io.emit('chat message', usr, msg);
     });
     socket.on('user typing', function(usr) {
@@ -39,5 +39,5 @@ io.on('connection', function(socket){
 });
 
 http.listen(3000, function(){
-  console.log('listening on *:3000');
+ // console.log('listening on *:3000');
 });
