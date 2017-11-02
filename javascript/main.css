@@ -14,13 +14,14 @@ body {
     font: 13px Helvetica, Arial;
     display: grid;
     grid-template-areas: 
+        "title"
         "messages"
-        "username"
-        "tosend";
-        grid-template-rows: 1fr auto auto;
+        "tosend"
+        "username";
+        grid-template-rows:auto 1fr auto auto;
         width: 100%;
         height: 100%;
-    
+    grid-gap: 5px;
 }
 
 form { 
@@ -52,6 +53,11 @@ form button {
     font-size: 16px;
 }
 
+h1 {
+    grid-area: title;
+    padding: 10px;
+}
+
 #display_info {
     display: grid;
     grid-template-columns: 10% auto;
@@ -66,7 +72,7 @@ form button {
 
 }
 
-ul, div {
+ul, div , body, h1{
     color:white;
     background-color: #1D2731;
 }
@@ -76,12 +82,17 @@ ul, div {
     margin: 0; 
     padding: 8px; 
     grid-area: messages;
+    font-size: 20px;
+    overflow-y: scroll;
 }
 
 #messages li { 
     padding: 5px 10px; 
+    background: #4CAF50;
+    margin: 3px;
 }
 
 #messages li:nth-child(odd) { 
-    background: #eee; 
+    background: #328CC1; 
+    margin: 6px;
 }
