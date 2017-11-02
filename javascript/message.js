@@ -21,7 +21,7 @@ $(function () {
     });
 
     socket.on('user typing', function(usr) {
-        $('display-typing').text(usr + " is typing...");
+        $("#display-typing").text(usr + " is typing...");
     });
 });
 
@@ -30,7 +30,7 @@ $(document).ready(function (){
     $("#display-username").text("Username: " + username);
     socket.emit('new user', username);
 
-    $("m").keyup(function() {
+    $("#m").keyup(function() {
         socket.emit('user typing', username);
     });
 });
