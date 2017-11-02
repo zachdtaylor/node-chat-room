@@ -30,6 +30,7 @@ $(function () {
 
 $(document).ready(function (){
     username = prompt("Please enter your username");
+    if(username=="") username="lazy pants";
     $("#display-username").text("Username: " + username);
     socket.emit('new user', username);
 
