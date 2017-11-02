@@ -9,3 +9,10 @@ $(function () {
     $('#messages').append($('<li>').text(msg));
     });
 });
+
+$(document).ready(function (){
+        var name=prompt("Please enter your username");
+        if (name!=null){
+          alert("Username was " + name);
+       }
+    });
